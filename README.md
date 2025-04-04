@@ -1,10 +1,6 @@
 # AgendApp ✨
 
-**AgendApp** es una aplicación de escritorio desarrollada en **Java** con **JavaFX** para la gestión sencilla y eficiente de una agenda de contactos.
-
-## 📚 Características
-- 👤 **Gestor de Contactos**: Agrega, edita y elimina contactos de forma intuitiva.
-- ⚙️ **Interfaz Moderna**: Diseño atractivo y fácil de usar con JavaFX.
+**AgendApp** es una aplicación de escritorio desarrollada en **Java** con **JavaFX** como ejemplo de clase del módulo de Programación de 1º del C.F.G.S de Desarrollo de Aplicaciones Multiplataforma (DAM).
 
 ## ⚙️ Tecnologías Utilizadas
 - **Java+**
@@ -27,9 +23,3 @@
  mvn clean install
  mvn javafx:run
 ```
-
-## 🎉 Capturas de Pantalla
-*(Pronto se agregarán imágenes de la interfaz de usuario)*
-
-## ⚖️ Licencia
-Este proyecto está bajo la licencia **MIT**. Consulta el archivo `LICENSE` para más detalles.
