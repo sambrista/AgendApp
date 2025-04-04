@@ -13,6 +13,7 @@ public class PrincipalController {
     public Label emailLabel;
     public Label telefonoLabel;
     public Label textoTelefonoLabel;
+    public Label textoEmailLabel;
     private ObservableList<Contacto> contactos = FXCollections.observableArrayList();
 
     public void initialize() {
@@ -26,10 +27,28 @@ public class PrincipalController {
     }
 
     public void manejarClickEnContactosListView(MouseEvent mouseEvent) {
+        if (contactosListView.getSe(mouseEvent.getY()) == null) {
+            listView.getSelectionModel().clearSelection();
+        }
         Contacto contactoSeleccionado = contactosListView.getSelectionModel().getSelectedItem();
         if (contactoSeleccionado != null) {
-            nombreLabel.setText(contactoSeleccionado.getNombre() + " " + contactoSeleccionado.getPrimerApellido() + " " + contactoSeleccionado.getSegundoApellido());
-            textoTelefonoLabel.setVisible(true);
+
         }
+    }
+
+    private void mostrarDatosContacto(Contacto contacto) {
+        nombreLabel.setText(contacto.getNombre() + " " + contacto.getPrimerApellido() + " " + contacto.getSegundoApellido());
+        textoTelefonoLabel.setVisible(true);
+        telefonoLabel.setText(contacto.getTelefono());
+        textoEmailLabel.setVisible(true);
+        emailLabel.setText(contacto.getEmail());
+    }
+
+    private void limpiarDatosContacto() {
+        nombreLabel.setText("");
+        textoTelefonoLabel.setVisible(false);
+        telefonoLabel.setText("");
+        textoEmailLabel.setVisible(false);
+        emailLabel.setText("");
     }
 }
