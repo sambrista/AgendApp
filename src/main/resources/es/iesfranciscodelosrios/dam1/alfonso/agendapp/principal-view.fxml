@@ -11,12 +11,12 @@
         <menus>
           <Menu mnemonicParsing="false" text="Archivo">
             <items>
-              <MenuItem mnemonicParsing="false" text="Salir" />
+              <MenuItem mnemonicParsing="false" onAction="#cerrarAplicacion" text="Salir" />
             </items>
           </Menu>
           <Menu mnemonicParsing="false" text="Ayuda">
             <items>
-              <MenuItem mnemonicParsing="false" text="Acerca de" />
+              <MenuItem mnemonicParsing="false" onAction="#mostrarAcercaDe" text="Acerca de" />
             </items>
           </Menu>
         </menus>

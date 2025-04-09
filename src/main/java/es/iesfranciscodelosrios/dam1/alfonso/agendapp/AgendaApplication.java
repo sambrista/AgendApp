@@ -11,8 +11,8 @@ public class AgendaApplication extends Application {
     @Override
     public void start(Stage stage) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(AgendaApplication.class.getResource("principal-view.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), 320, 240);
-        stage.setTitle("AgendApp 0.1");
+        Scene scene = new Scene(fxmlLoader.load(), 400, 240);
+        stage.setTitle("AgendApp 1.0");
         stage.setScene(scene);
         stage.show();
     }

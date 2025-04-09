@@ -2,11 +2,13 @@ package es.iesfranciscodelosrios.dam1.alfonso.agendapp.controller;
 
 import es.iesfranciscodelosrios.dam1.alfonso.agendapp.AgendaApplication;
 import es.iesfranciscodelosrios.dam1.alfonso.agendapp.model.Contacto;
+import javafx.application.Platform;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
 import javafx.scene.input.MouseEvent;
@@ -25,12 +27,6 @@ public class PrincipalController {
     private ObservableList<Contacto> contactos = FXCollections.observableArrayList();
 
     public void initialize() {
-        Contacto contacto1 = new Contacto("Paco",
-                                     "Pérez",
-                                   "Fernández",
-                                         "957 123 456",
-                                            "pacoperez@gmail.com");
-        contactos.add(contacto1);
         contactosListView.setItems(contactos);
     }
 
@@ -99,5 +95,17 @@ public class PrincipalController {
             contactos.remove(contactoSeleccionado);
             mostrarContactoEnPanelLateral(null);
         }
+    }
+
+    public void cerrarAplicacion(ActionEvent actionEvent) {
+        Platform.exit();
+    }
+
+    public void mostrarAcercaDe(ActionEvent actionEvent) {
+        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+        alert.setTitle("Acerca de");
+        alert.setHeaderText("AgendApp 1.0");
+        alert.setContentText("AgendApp es un software desarrollado por Alfonso Jiménez");
+        alert.showAndWait();
     }
 }
